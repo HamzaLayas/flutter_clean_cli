@@ -1,5 +1,5 @@
-/// A library for the FlutterClean CLI.
-library flutter_clean;
+/// A library for the Flutter Blueprint CLI.
+library flutter_blueprint_cli;
 
 export 'src/commands/add_command.dart';
 export 'src/commands/create_command.dart';

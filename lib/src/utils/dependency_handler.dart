@@ -59,56 +59,56 @@ Future<void> ensureCliDartVersionMatchesFlutter(Logger logger) async {
 
   final versionJson = json.decode(flutterVersionResult.stdout as String);
   final dartVersion = versionJson['dartSdkVersion'] as String?;
-  if (dartVersion == null) return;
+  if (dartVersion == null) {
+    logger.warn('⚠️ Could not parse Dart SDK version.');
+    return;
+  }
 
   final dartMajor = int.parse(dartVersion.split('.').first);
   final newConstraint = "'>=$dartMajor.0.0 <${dartMajor + 1}.0.0'";
 
   final pubspecFile = File(p.join(Directory.current.path, 'pubspec.yaml'));
-  if (!pubspecFile.existsSync()) return;
+  if (!pubspecFile.existsSync()) {
+    logger.err('❌ pubspec.yaml not found.');
+    return;
+  }
 
   final lines = pubspecFile.readAsLinesSync();
+  bool updated = false;
   final newLines = <String>[];
-  var inEnv = false;
-  var updated = false;
+  bool envFound = false, sdkFound = false;
 
   for (final line in lines) {
-    if (line.trim().startsWith('environment:')) {
-      inEnv = true;
-      newLines.add(line);
-      continue;
-    }
-    if (inEnv && line.trim().startsWith('sdk:')) {
-      final currentConstraint = line.split(':').last.trim();
-      if (currentConstraint != newConstraint) {
+    if (line.trim().startsWith('environment:')) envFound = true;
+    if (line.trim().startsWith('sdk:')) {
+      sdkFound = true;
+      final current = line.split(':').last.trim();
+      if (current != newConstraint) {
         newLines.add("  sdk: $newConstraint");
         updated = true;
-      } else {
-        newLines.add(line);
+        continue;
       }
-      inEnv = false;
-      continue;
     }
     newLines.add(line);
   }
 
+  // If sdk: was not found, add it (and environment: if needed) at the end
+  if (!sdkFound) {
+    if (!envFound) newLines.add('environment:');
+    newLines.add("  sdk: $newConstraint");
+    updated = true;
+  }
+
   if (updated) {
-    try {
-      pubspecFile.writeAsStringSync(newLines.join('\n'));
-      logger.info(
-        '✏️ Updated CLI Dart SDK version in pubspec.yaml to $newConstraint',
-      );
-      final pubGet =
-          await Process.run('dart', ['pub', 'get'], runInShell: true);
-      if (pubGet.exitCode == 0) {
-        logger.info('✅ CLI dependencies updated.');
-      } else {
-        logger.err(
-          '❌ Failed to update CLI dependencies. Please run "dart pub get" manually.',
-        );
-      }
-    } catch (e) {
-      logger.err('❌ Failed to update CLI Dart SDK constraint: $e');
+    pubspecFile.writeAsStringSync(newLines.join('\n'));
+    logger.info('✏️ Updated CLI Dart SDK version in pubspec.yaml to $newConstraint');
+    final pubGet = await Process.run('dart', ['pub', 'get'], runInShell: true);
+    if (pubGet.exitCode == 0) {
+      logger.info('✅ CLI dependencies updated.');
+    } else {
+      logger.err('❌ Failed to update CLI dependencies. Please run "dart pub get" manually.');
     }
+  } else {
+    logger.info('✅ Dart SDK constraint already up to date.');
   }
 }
