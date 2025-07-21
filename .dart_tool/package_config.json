@@ -350,7 +350,7 @@
       "languageVersion": "3.4"
     },
     {
-      "name": "flutterclean",
+      "name": "flutter_clean_cli",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "3.8"

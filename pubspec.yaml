@@ -1,4 +1,4 @@
-name: flutterclean
+name: flutter_clean_cli
 description: A clean architecture generator for Flutter projects
 version: 1.0.0
 homepage: https://github.com/HamzaLayas/flutter_clean_cli

@@ -7,7 +7,7 @@ A modern CLI tool for generating Flutter projects with a non-feature-based clean
 ## 🚀 Installation
 
 ```sh
-dart pub global activate flutterclean
+dart pub global activate flutter_clean_cli
 ```
 
 ---

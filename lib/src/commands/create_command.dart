@@ -1,11 +1,11 @@
 import 'dart:io';
 
 import 'package:args/args.dart';
-import 'package:flutterclean/src/bundles/clean_feature_bundle.dart';
-import 'package:flutterclean/src/bundles/project_setup_bundle.dart';
-import 'package:flutterclean/src/utils/dependency_handler.dart';
-import 'package:flutterclean/src/utils/generator_helper.dart';
-import 'package:flutterclean/src/utils/project_validator.dart';
+import 'package:flutter_clean_cli/src/bundles/clean_feature_bundle.dart';
+import 'package:flutter_clean_cli/src/bundles/project_setup_bundle.dart';
+import 'package:flutter_clean_cli/src/utils/dependency_handler.dart';
+import 'package:flutter_clean_cli/src/utils/generator_helper.dart';
+import 'package:flutter_clean_cli/src/utils/project_validator.dart';
 import 'package:mason/mason.dart';
 
 /// Handles the `create` command, which generates a new Flutter project.
@@ -72,13 +72,13 @@ class CreateCommand {
     String projectName,
     Logger logger,
   ) async {
-    final progress =
-        logger.progress('Running "flutter create $projectName"...');
-    final result = await Process.run(
-      'flutter',
-      ['create', projectName],
-      runInShell: true,
+    final progress = logger.progress(
+      'Running "flutter create $projectName"...',
     );
+    final result = await Process.run('flutter', [
+      'create',
+      projectName,
+    ], runInShell: true);
     if (result.exitCode != 0) {
       progress.fail('❌ Failed to create Flutter project.');
       logger.err(result.stderr);

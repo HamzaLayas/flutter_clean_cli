@@ -2,9 +2,9 @@ import 'dart:io';
 
 import 'package:args/args.dart';
 import 'package:mason/mason.dart';
-import 'package:flutterclean/src/bundles/clean_feature_bundle.dart';
-import 'package:flutterclean/src/utils/generator_helper.dart';
-import 'package:flutterclean/src/utils/project_validator.dart';
+import 'package:flutter_clean_cli/src/bundles/clean_feature_bundle.dart';
+import 'package:flutter_clean_cli/src/utils/generator_helper.dart';
+import 'package:flutter_clean_cli/src/utils/project_validator.dart';
 
 /// Handles the `add` command, which adds a new feature to the project.
 class AddCommand {
