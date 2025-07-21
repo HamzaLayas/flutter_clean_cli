@@ -1,6 +1,6 @@
 name: flutter_clean_cli
 description: A clean architecture generator for Flutter projects
-version: 1.0.0
+version: 1.0.2
 homepage: https://github.com/HamzaLayas/flutter_clean_cli
 repository: https://github.com/HamzaLayas/flutter_clean_cli
 issue_tracker: https://github.com/HamzaLayas/flutter_clean_cli/issues

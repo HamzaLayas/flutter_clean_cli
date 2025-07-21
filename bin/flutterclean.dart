@@ -3,8 +3,8 @@
 import 'dart:io';
 
 import 'package:args/args.dart';
-import 'package:flutterclean/flutterclean.dart';
 import 'package:mason/mason.dart';
+import 'package:flutter_clean_cli/flutter_clean_cli.dart';
 
 Future<void> main(List<String> args) async {
   final logger = Logger();
