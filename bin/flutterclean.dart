@@ -3,11 +3,7 @@
 import 'dart:io';
 
 import 'package:args/args.dart';
-import 'package:flutterclean/src/commands/add_command.dart';
-import 'package:flutterclean/src/commands/create_command.dart';
-import 'package:flutterclean/src/commands/help_command.dart';
-import 'package:flutterclean/src/commands/upgrade_command.dart';
-import 'package:flutterclean/src/utils/dependency_handler.dart';
+import 'package:flutterclean/flutterclean.dart';
 import 'package:mason/mason.dart';
 
 Future<void> main(List<String> args) async {
