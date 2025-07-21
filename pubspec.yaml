@@ -1,0 +1,22 @@
+name: flutterclean
+description: A clean architecture generator for Flutter projects
+version: 1.0.0
+repository: https://github.com/HamzaLayas/flutter_clean
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  args: ^2.4.2
+  path: ^1.9.0
+  mason: ^0.1.0-dev.50
+  mason_logger: ^0.2.5
+
+dev_dependencies:
+  test: ^1.24.0
+
+executables:
+  flutterclean:
+assets:
+  - bricks/project_setup/
+  - bricks/clean_feature/

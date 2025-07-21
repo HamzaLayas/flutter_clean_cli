@@ -1,0 +1,3 @@
+bricks:
+  project_setup: bricks/project_setup
+  clean_feature: bricks/clean_feature 

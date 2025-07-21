@@ -1,0 +1,9 @@
+version: 0.1.0
+name: project_setup
+description: A brick to set up a new Flutter project with a clean architecture.
+
+vars:
+  project_name:
+    type: string
+    description: The name of the project.
+    prompt: What is the name of the project? 

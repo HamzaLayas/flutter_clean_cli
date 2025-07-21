@@ -1,0 +1,3 @@
+# Ignore the bricks and example directories
+bricks/
+example/ 

@@ -1,0 +1,6 @@
+# Analysis options for FlutterClean CLI
+
+analyzer:
+  exclude:
+    - bricks/**
+    - example/** 
