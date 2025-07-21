@@ -5,7 +5,7 @@ class HelpCommand {
   /// Executes the `help` command.
   static void execute(Logger logger) {
     logger.info('''
-FlutterClean CLI (flutter_clean_cli)
+Flutter Blueprint CLI (flutter_blueprint_cli)
 
 A modern CLI tool for generating Flutter projects with a clean architecture.
 

@@ -1,4 +1,4 @@
-# FlutterClean CLI
+# Flutter Blueprint CLI
 
 A modern CLI tool for generating Flutter projects with a non-feature-based clean architecture, powered by template-driven code generation using Mason bricks.
 
@@ -7,7 +7,7 @@ A modern CLI tool for generating Flutter projects with a non-feature-based clean
 ## 🚀 Installation
 
 ```sh
-dart pub global activate flutter_clean_cli
+dart pub global activate flutter_blueprint_cli
 ```
 
 ---

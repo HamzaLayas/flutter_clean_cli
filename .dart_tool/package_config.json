@@ -350,7 +350,7 @@
       "languageVersion": "3.4"
     },
     {
-      "name": "flutter_clean_cli",
+      "name": "flutter_blueprint_cli",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "3.8"

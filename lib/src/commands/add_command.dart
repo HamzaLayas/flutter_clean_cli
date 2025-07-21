@@ -2,9 +2,7 @@ import 'dart:io';
 
 import 'package:args/args.dart';
 import 'package:mason/mason.dart';
-import 'package:flutter_clean_cli/src/bundles/clean_feature_bundle.dart';
-import 'package:flutter_clean_cli/src/utils/generator_helper.dart';
-import 'package:flutter_clean_cli/src/utils/project_validator.dart';
+import 'package:flutter_blueprint_cli/flutter_blueprint_cli.dart';
 
 /// Handles the `add` command, which adds a new feature to the project.
 class AddCommand {
@@ -60,8 +58,9 @@ class AddCommand {
         '✅ Successfully added model for "$name" ($filesGenerated files)',
       );
     } else if (onlyData) {
-      final progress = logger
-          .progress('Generating data source and repository for "$name"...');
+      final progress = logger.progress(
+        'Generating data source and repository for "$name"...',
+      );
       final filesGenerated = await GeneratorHelper.generate(
         generator: generator,
         destination: projectRoot,
@@ -72,8 +71,9 @@ class AddCommand {
         '✅ Successfully added data source and repository for "$name" ($filesGenerated files)',
       );
     } else {
-      final progress =
-          logger.progress('Generating feature "$name" in all layers...');
+      final progress = logger.progress(
+        'Generating feature "$name" in all layers...',
+      );
       final filesGenerated = await GeneratorHelper.generate(
         generator: generator,
         destination: projectRoot,

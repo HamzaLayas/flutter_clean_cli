@@ -1,12 +1,8 @@
 import 'dart:io';
 
 import 'package:args/args.dart';
-import 'package:flutter_clean_cli/src/bundles/clean_feature_bundle.dart';
-import 'package:flutter_clean_cli/src/bundles/project_setup_bundle.dart';
-import 'package:flutter_clean_cli/src/utils/dependency_handler.dart';
-import 'package:flutter_clean_cli/src/utils/generator_helper.dart';
-import 'package:flutter_clean_cli/src/utils/project_validator.dart';
 import 'package:mason/mason.dart';
+import 'package:flutter_blueprint_cli/flutter_blueprint_cli.dart';
 
 /// Handles the `create` command, which generates a new Flutter project.
 class CreateCommand {

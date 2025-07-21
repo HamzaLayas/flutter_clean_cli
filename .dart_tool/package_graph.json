@@ -1,10 +1,10 @@
 {
   "roots": [
-    "flutter_clean_cli"
+    "flutter_blueprint_cli"
   ],
   "packages": [
     {
-      "name": "flutter_clean_cli",
+      "name": "flutter_blueprint_cli",
       "version": "1.0.2",
       "dependencies": [
         "args",

@@ -4,7 +4,7 @@ import 'dart:io';
 
 import 'package:args/args.dart';
 import 'package:mason/mason.dart';
-import 'package:flutter_clean_cli/flutter_clean_cli.dart';
+import 'package:flutter_blueprint_cli/flutter_blueprint_cli.dart';
 
 Future<void> main(List<String> args) async {
   final logger = Logger();
