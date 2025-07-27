@@ -1,9 +1,0 @@
-version: 0.1.0
-name: clean_feature
-description: A brick to create a new feature with a clean architecture.
-
-vars:
-  name:
-    type: string
-    description: The name of the feature.
-    prompt: What is the name of the feature? 

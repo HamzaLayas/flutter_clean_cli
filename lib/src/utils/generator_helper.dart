@@ -6,7 +6,7 @@ import 'package:path/path.dart' as p;
 /// A helper class to run a Mason generator and provide detailed logging.
 class GeneratorHelper {
   /// Runs the generator and logs created files and directories.
-  static Future<int> generate({
+  static Future<void> generate({
     required MasonGenerator generator,
     required Directory destination,
     required Map<String, dynamic> vars,
@@ -45,7 +45,5 @@ class GeneratorHelper {
     for (final file in sortedFiles) {
       logger.info('📄 Created: ${p.normalize(file)}');
     }
-
-    return generatedFiles.length;
   }
 }

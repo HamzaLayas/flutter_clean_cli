@@ -1,3 +1,8 @@
+## 1.1.0
+
+- Changed folder structure to lib -> src -> app & layers.
+- Removed upgrade command temperarly.
+
 ## 1.0.3
 
 - Fix to upgrade command.

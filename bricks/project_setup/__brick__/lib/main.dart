@@ -3,8 +3,8 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
 
-import 'app/app.dart';
-import 'app/config/dependency_injection.dart';
+import 'src/app/app.dart';
+import 'src/app/config/dependency_injection.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,4 +15,4 @@ void main() async {
   runApp(
     MyApp(),
   );
-}
+} 

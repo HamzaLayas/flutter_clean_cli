@@ -11,10 +11,12 @@ class DependencyHandler {
     String projectName,
     Logger logger,
   ) async {
-    const packages = [
+    // Regular packages (no special flags)
+    final regularPackages = [
       'flutter_bloc',
       'hydrated_bloc',
       'path_provider',
+      'permission_handler',
       'equatable',
       'get_it',
       'cached_network_image',
@@ -24,10 +26,46 @@ class DependencyHandler {
       'pretty_dio_logger',
       'flutter_dotenv',
       'intl',
+      'flutter_offline',
+      'flutter_local_notifications',
+      'firebase_messaging',
+      'firebase_core',
+      'shared_preferences',
+      'go_router',
+      'url_launcher',
+      'fpdart',
+      'skeletonizer',
     ];
 
-    final progress = logger.progress('📦 Installing dependencies...');
-    for (final package in packages) {
+    // Packages that require --sdk=flutter flag
+    final sdkPackages = [
+      'flutter_web_plugins',
+      'flutter_localizations',
+    ];
+
+    logger.info('📦 Installing dependencies...');
+
+    // Install SDK packages with special flag
+    for (final package in sdkPackages) {
+      final progress = logger.progress('📦 Installing $package with SDK flag');
+      final result = await Process.run(
+        'flutter',
+        ['pub', 'add', package, '--sdk=flutter'],
+        workingDirectory: projectName,
+        runInShell: true,
+      );
+      if (result.exitCode != 0) {
+        progress.fail('🚫 Failed to install $package with SDK flag');
+        logger.err(result.stderr);
+        exit(1);
+      }
+
+      progress.complete('📦 $package installed successfully');
+    }
+
+    // Install regular packages
+    for (final package in regularPackages) {
+      final progress = logger.progress('📦 Installing $package');
       final result = await Process.run(
         'flutter',
         ['pub', 'add', package],
@@ -35,12 +73,12 @@ class DependencyHandler {
         runInShell: true,
       );
       if (result.exitCode != 0) {
-        progress.fail('❌ Failed to install dependencies.');
+        progress.fail('🚫 Failed to install $package');
         logger.err(result.stderr);
         exit(1);
       }
+      progress.complete('📦 $package installed successfully');
     }
-    progress.complete('✅ Dependencies installed.');
   }
 }
 
@@ -69,7 +107,7 @@ Future<void> ensureCliDartVersionMatchesFlutter(Logger logger) async {
 
   final pubspecFile = File(p.join(Directory.current.path, 'pubspec.yaml'));
   if (!pubspecFile.existsSync()) {
-    logger.err('❌ pubspec.yaml not found.');
+    logger.err('🚫 pubspec.yaml not found.');
     return;
   }
 
@@ -101,12 +139,14 @@ Future<void> ensureCliDartVersionMatchesFlutter(Logger logger) async {
 
   if (updated) {
     pubspecFile.writeAsStringSync(newLines.join('\n'));
-    logger.info('✏️ Updated CLI Dart SDK version in pubspec.yaml to $newConstraint');
+    logger.info(
+        '✏️ Updated CLI Dart SDK version in pubspec.yaml to $newConstraint');
     final pubGet = await Process.run('dart', ['pub', 'get'], runInShell: true);
     if (pubGet.exitCode == 0) {
       logger.info('✅ CLI dependencies updated.');
     } else {
-      logger.err('❌ Failed to update CLI dependencies. Please run "dart pub get" manually.');
+      logger.err(
+          '🚫 Failed to update CLI dependencies. Please run "dart pub get" manually.');
     }
   } else {
     logger.info('✅ Dart SDK constraint already up to date.');

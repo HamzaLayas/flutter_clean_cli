@@ -1,6 +1,6 @@
 name: flutter_blueprint_cli
 description: A clean architecture generator for Flutter projects
-version: 1.0.3
+version: 1.1.0
 homepage: https://github.com/HamzaLayas/flutter_clean_cli
 repository: https://github.com/HamzaLayas/flutter_clean_cli
 issue_tracker: https://github.com/HamzaLayas/flutter_clean_cli/issues

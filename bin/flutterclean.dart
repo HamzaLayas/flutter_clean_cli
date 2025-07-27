@@ -17,12 +17,9 @@ Future<void> main(List<String> args) async {
     exit(0);
   }
 
-  await ensureCliDartVersionMatchesFlutter(logger);
-
   final parser = ArgParser()
     ..addCommand('create', CreateCommand.parser)
-    ..addCommand('add', AddCommand.parser)
-    ..addCommand('upgrade', UpgradeCommand.parser);
+    ..addCommand('add', AddCommand.parser);
 
   try {
     final result = parser.parse(args);
@@ -54,9 +51,9 @@ Future<void> main(List<String> args) async {
         }
         await AddCommand.execute(command, logger);
         break;
-      case 'upgrade':
-        await UpgradeCommand.execute(logger);
-        break;
+      // case 'upgrade':
+      //   await UpgradeCommand.execute(logger);
+      //   break;
       default:
         logger.err('Invalid command: ${command.name}');
         exit(1);

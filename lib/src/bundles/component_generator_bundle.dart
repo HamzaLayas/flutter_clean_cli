@@ -1,0 +1,59 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, implicit_dynamic_list_literal, implicit_dynamic_map_literal, inference_failure_on_collection_literal
+
+import 'package:mason/mason.dart';
+
+final componentGeneratorBundle = MasonBundle.fromJson(<String, dynamic>{
+  "files": [
+    {
+      "path": "lib/src/data/data_sources/{{name.snakeCase()}}_data_source.dart",
+      "data":
+          "aW1wb3J0ICdwYWNrYWdlOmRpby9kaW8uZGFydCc7DQoNCmltcG9ydCAnLi4vLi4vLi4vZ2VuZXJhdGVkL2wxMG4uZGFydCc7DQppbXBvcnQgJy4uLy4uL2FwcC9jb25zdGFudHMvYXBpX2NvbnN0YW50cy5kYXJ0JzsNCmltcG9ydCAnLi4vLi4vYXBwL3V0aWxpdGllcy9lcnJvcnMvZXhjZXB0aW9ucy5kYXJ0JzsNCmltcG9ydCAnLi4vbW9kZWxzL3t7bmFtZS5zbmFrZUNhc2UoKX19X21vZGVsLmRhcnQnOw0KDQphYnN0cmFjdCBjbGFzcyB7e25hbWUucGFzY2FsQ2FzZSgpfX1EYXRhU291cmNlIHsNCiAgRnV0dXJlPHt7bmFtZS5wYXNjYWxDYXNlKCl9fU1vZGVsPiBnZXR7e25hbWUucGFzY2FsQ2FzZSgpfX0oKTsNCn0NCg0KY2xhc3Mge3tuYW1lLnBhc2NhbENhc2UoKX19RGF0YVNvdXJjZUltcGwgaW1wbGVtZW50cyB7e25hbWUucGFzY2FsQ2FzZSgpfX1EYXRhU291cmNlIHsNCiAgY29uc3Qge3tuYW1lLnBhc2NhbENhc2UoKX19RGF0YVNvdXJjZUltcGwodGhpcy5fZGlvKTsNCg0KICBmaW5hbCBEaW8gX2RpbzsNCg0KICBAb3ZlcnJpZGUNCiAgRnV0dXJlPHt7bmFtZS5wYXNjYWxDYXNlKCl9fU1vZGVsPiBnZXR7e25hbWUucGFzY2FsQ2FzZSgpfX0oKSBhc3luYyB7DQogICAgdHJ5IHsNCiAgICAgIGZpbmFsIHJlc3BvbnNlID0gYXdhaXQgX2Rpby5wb3N0KEFwaUNvbnN0YW50cy5rR2V0e3tuYW1lLnBhc2NhbENhc2UoKX19KTsNCiAgICAgIHJldHVybiB7e25hbWUucGFzY2FsQ2FzZSgpfX1Nb2RlbC5mcm9tTWFwKHJlc3BvbnNlLmRhdGFbJ2RhdGEnXSk7DQogICAgfSBvbiBEaW9FeGNlcHRpb24gY2F0Y2ggKGUpIHsNCiAgICAgIHRocm93IEFQSUV4Y2VwdGlvbigNCiAgICAgICAgbWVzc2FnZTogZS5yZXNwb25zZT8uZGF0YVsnbWVzc2FnZSddID8/DQogICAgICAgICAgICBlLnJlc3BvbnNlPy5zdGF0dXNNZXNzYWdlID8/DQogICAgICAgICAgICBTLmN1cnJlbnQuc29tZXRoaW5nV2VudFdyb25nLA0KICAgICAgICBzdGF0dXNDb2RlOiBlLnJlc3BvbnNlPy5zdGF0dXNDb2RlID8/IDUwNSwNCiAgICAgICAgdHlwZTogZS50eXBlLA0KICAgICAgKTsNCiAgICB9IGNhdGNoIChlKSB7DQogICAgICB0aHJvdyBBUElFeGNlcHRpb24oDQogICAgICAgICAgbWVzc2FnZTogZS50b1N0cmluZygpLA0KICAgICAgICAgIHN0YXR1c0NvZGU6IDUwNSwNCiAgICAgICAgICB0eXBlOiBEaW9FeGNlcHRpb25UeXBlLnVua25vd24pOw0KICAgIH0NCiAgfQ0KfSA=",
+      "type": "text"
+    },
+    {
+      "path": "lib/src/data/models/{{name.snakeCase()}}_model.dart",
+      "data":
+          "aW1wb3J0ICdkYXJ0OmNvbnZlcnQnOw0KDQppbXBvcnQgJy4uLy4uL2FwcC91dGlsaXRpZXMvdHlwZWRlZi5kYXJ0JzsNCmltcG9ydCAnLi4vLi4vZG9tYWluL2VudGl0aWVzL3t7bmFtZS5zbmFrZUNhc2UoKX19X2VudGl0eS5kYXJ0JzsNCg0KY2xhc3Mge3tuYW1lLnBhc2NhbENhc2UoKX19TW9kZWwgZXh0ZW5kcyB7e25hbWUucGFzY2FsQ2FzZSgpfX1FbnRpdHkgew0KICBjb25zdCB7e25hbWUucGFzY2FsQ2FzZSgpfX1Nb2RlbCh7DQogICAgcmVxdWlyZWQgc3VwZXIuaWQsDQogICAgcmVxdWlyZWQgc3VwZXIubmFtZSwNCiAgfSk7DQoNCiAgY29uc3Qge3tuYW1lLnBhc2NhbENhc2UoKX19TW9kZWwuZW1wdHkoKQ0KICAgICAgOiB0aGlzKA0KICAgICAgICAgIGlkOiAtMSwNCiAgICAgICAgICBuYW1lOiAnX2VtcHR5Lm5hbWUnLA0KICAgICAgICApOw0KDQogIHt7bmFtZS5wYXNjYWxDYXNlKCl9fU1vZGVsIGNvcHlXaXRoKHsNCiAgICBpbnQ/IGlkLA0KICAgIFN0cmluZz8gbmFtZSwNCiAgfSkgew0KICAgIHJldHVybiB7e25hbWUucGFzY2FsQ2FzZSgpfX1Nb2RlbCgNCiAgICAgIGlkOiBpZCA/PyB0aGlzLmlkLA0KICAgICAgbmFtZTogbmFtZSA/PyB0aGlzLm5hbWUsDQogICAgKTsNCiAgfQ0KDQogIERhdGFNYXAgdG9NYXAoKSA9PiB7DQogICAgICAgICdpZCc6IGlkLA0KICAgICAgICAnbmFtZSc6IG5hbWUsDQogICAgICB9Ow0KDQogIGZhY3Rvcnkge3tuYW1lLnBhc2NhbENhc2UoKX19TW9kZWwuZnJvbU1hcChEYXRhTWFwIG1hcCkgew0KICAgIHJldHVybiB7e25hbWUucGFzY2FsQ2FzZSgpfX1Nb2RlbCgNCiAgICAgIGlkOiBtYXBbJ2lkJ10gYXMgaW50LA0KICAgICAgbmFtZTogbWFwWyduYW1lJ10gYXMgU3RyaW5nLA0KICAgICk7DQogIH0NCg0KICBmYWN0b3J5IHt7bmFtZS5wYXNjYWxDYXNlKCl9fU1vZGVsLmZyb21Kc29uKFN0cmluZyBzb3VyY2UpID0+DQogICAgICB7e25hbWUucGFzY2FsQ2FzZSgpfX1Nb2RlbC5mcm9tTWFwKGpzb24uZGVjb2RlKHNvdXJjZSkgYXMgRGF0YU1hcCk7DQoNCiAgU3RyaW5nIHRvSnNvbigpID0+IGpzb24uZW5jb2RlKHRvTWFwKCkpOw0KfSA=",
+      "type": "text"
+    },
+    {
+      "path":
+          "lib/src/data/repositories/{{name.snakeCase()}}_repository_impl.dart",
+      "data":
+          "aW1wb3J0ICdwYWNrYWdlOmZwZGFydC9mcGRhcnQuZGFydCc7DQoNCmltcG9ydCAnLi4vLi4vZG9tYWluL2VudGl0aWVzL3t7bmFtZS5zbmFrZUNhc2UoKX19X2VudGl0eS5kYXJ0JzsNCmltcG9ydCAnLi4vZGF0YV9zb3VyY2VzL3t7bmFtZS5zbmFrZUNhc2UoKX19X2RhdGFfc291cmNlLmRhcnQnOw0KaW1wb3J0ICcuLi8uLi9kb21haW4vcmVwb3NpdG9yaWVzL3t7bmFtZS5zbmFrZUNhc2UoKX19X3JlcG9zaXRvcnkuZGFydCc7DQppbXBvcnQgJy4uLy4uL2FwcC91dGlsaXRpZXMvdHlwZWRlZi5kYXJ0JzsNCmltcG9ydCAnLi4vLi4vYXBwL3V0aWxpdGllcy9lcnJvcnMvZmFpbHVyZS5kYXJ0JzsNCmltcG9ydCAnLi4vLi4vYXBwL3V0aWxpdGllcy9lcnJvcnMvZXhjZXB0aW9ucy5kYXJ0JzsNCg0KY2xhc3Mge3tuYW1lLnBhc2NhbENhc2UoKX19UmVwb3NpdG9yeUltcGwgaW1wbGVtZW50cyB7e25hbWUucGFzY2FsQ2FzZSgpfX1SZXBvc2l0b3J5IHsNCiAgY29uc3Qge3tuYW1lLnBhc2NhbENhc2UoKX19UmVwb3NpdG9yeUltcGwodGhpcy5fe3tuYW1lLmNhbWVsQ2FzZSgpfX1EYXRhU291cmNlKTsNCg0KICBmaW5hbCB7e25hbWUucGFzY2FsQ2FzZSgpfX1EYXRhU291cmNlIF97e25hbWUuY2FtZWxDYXNlKCl9fURhdGFTb3VyY2U7DQogIEBvdmVycmlkZQ0KICBSZXN1bHRGdXR1cmU8e3tuYW1lLnBhc2NhbENhc2UoKX19RW50aXR5PiBnZXR7e25hbWUucGFzY2FsQ2FzZSgpfX0oKSBhc3luYyB7DQogICAgdHJ5IHsNCiAgICAgIGZpbmFsIHJlc3VsdCA9IGF3YWl0IF97e25hbWUuY2FtZWxDYXNlKCl9fURhdGFTb3VyY2UuZ2V0e3tuYW1lLnBhc2NhbENhc2UoKX19KCk7DQogICAgICByZXR1cm4gUmlnaHQocmVzdWx0KTsNCiAgICB9IG9uIEFQSUV4Y2VwdGlvbiBjYXRjaCAoZSkgew0KICAgICAgcmV0dXJuIExlZnQoDQogICAgICAgIEFQSUZhaWx1cmUuZnJvbUV4Y2VwdGlvbihlKSwNCiAgICAgICk7DQogICAgfQ0KICB9DQp9IA==",
+      "type": "text"
+    },
+    {
+      "path": "lib/src/domain/entities/{{name.snakeCase()}}_entity.dart",
+      "data":
+          "aW1wb3J0ICdwYWNrYWdlOmVxdWF0YWJsZS9lcXVhdGFibGUuZGFydCc7DQoNCmNsYXNzIHt7bmFtZS5wYXNjYWxDYXNlKCl9fUVudGl0eSBleHRlbmRzIEVxdWF0YWJsZSB7DQogIGNvbnN0IHt7bmFtZS5wYXNjYWxDYXNlKCl9fUVudGl0eSh7DQogICAgcmVxdWlyZWQgdGhpcy5pZCwNCiAgICByZXF1aXJlZCB0aGlzLm5hbWUsDQogIH0pOw0KDQogIGNvbnN0IHt7bmFtZS5wYXNjYWxDYXNlKCl9fUVudGl0eS5lbXB0eSgpDQogICAgICA6IHRoaXMoDQogICAgICAgICAgaWQ6IC0xLA0KICAgICAgICAgIG5hbWU6ICdfZW1wdHkubmFtZScsDQogICAgICAgICk7DQoNCiAgZmluYWwgaW50IGlkOw0KICBmaW5hbCBTdHJpbmcgbmFtZTsNCg0KICBAb3ZlcnJpZGUNCiAgTGlzdDxPYmplY3Q+IGdldCBwcm9wcyA9PiBbaWQsIG5hbWVdOw0KfSA=",
+      "type": "text"
+    },
+    {
+      "path":
+          "lib/src/domain/repositories/{{name.snakeCase()}}_repository.dart",
+      "data":
+          "aW1wb3J0ICcuLi8uLi9hcHAvdXRpbGl0aWVzL3R5cGVkZWYuZGFydCc7DQppbXBvcnQgJy4uL2VudGl0aWVzL3t7bmFtZS5zbmFrZUNhc2UoKX19X2VudGl0eS5kYXJ0JzsNCg0KYWJzdHJhY3QgY2xhc3Mge3tuYW1lLnBhc2NhbENhc2UoKX19UmVwb3NpdG9yeSB7DQogIFJlc3VsdEZ1dHVyZTx7e25hbWUucGFzY2FsQ2FzZSgpfX1FbnRpdHk+IGdldHt7bmFtZS5wYXNjYWxDYXNlKCl9fSgpOw0KfSA=",
+      "type": "text"
+    },
+    {
+      "path": "lib/src/domain/usecases/{{name.snakeCase()}}_use_case.dart",
+      "data":
+          "aW1wb3J0ICcuLi8uLi9hcHAvdXRpbGl0aWVzL3R5cGVkZWYuZGFydCc7DQppbXBvcnQgJy4uLy4uL2FwcC91dGlsaXRpZXMvdXNlY2FzZXMvdXNlY2FzZS5kYXJ0JzsNCmltcG9ydCAnLi4vZW50aXRpZXMve3tuYW1lLnNuYWtlQ2FzZSgpfX1fZW50aXR5LmRhcnQnOw0KaW1wb3J0ICcuLi9yZXBvc2l0b3JpZXMve3tuYW1lLnNuYWtlQ2FzZSgpfX1fcmVwb3NpdG9yeS5kYXJ0JzsNCg0KY2xhc3MgR2V0e3tuYW1lLnBhc2NhbENhc2UoKX19IGV4dGVuZHMgVXNlQ2FzZVdpdGhOb1BhcmFtczx7e25hbWUucGFzY2FsQ2FzZSgpfX1FbnRpdHk+IHsNCiAgY29uc3QgR2V0e3tuYW1lLnBhc2NhbENhc2UoKX19KHRoaXMuX3JlcG9zaXRvcnkpOw0KDQogIGZpbmFsIHt7bmFtZS5wYXNjYWxDYXNlKCl9fVJlcG9zaXRvcnkgX3JlcG9zaXRvcnk7DQoNCiAgQG92ZXJyaWRlDQogIFJlc3VsdEZ1dHVyZTx7e25hbWUucGFzY2FsQ2FzZSgpfX1FbnRpdHk+IGNhbGwoKSBhc3luYyA9PiBfcmVwb3NpdG9yeS5nZXR7e25hbWUucGFzY2FsQ2FzZSgpfX0oKTsNCn0g",
+      "type": "text"
+    }
+  ],
+  "hooks": [],
+  "name": "component_generator",
+  "description": "A brick to create a new component with a clean architecture.",
+  "version": "0.1.0",
+  "environment": {"mason": "any"},
+  "vars": {
+    "name": {
+      "type": "string",
+      "description": "The name of the component.",
+      "prompt": "What is the name of the component?"
+    }
+  }
+});

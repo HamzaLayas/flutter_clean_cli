@@ -25,14 +25,14 @@ class AddCommand {
   static Future<void> execute(ArgResults result, Logger logger) async {
     if (!ProjectValidator.ensureFlutterProject()) {
       logger
-        ..err('❌ Error: This is not a Flutter project directory.')
+        ..err('🚫 Error: This is not a Flutter project directory.')
         ..info('Please run this command from the root of a Flutter project.');
       exit(1);
     }
 
     if (result.rest.isEmpty) {
       logger
-        ..err('❌ Please specify a name for the feature.')
+        ..err('🚫 Please specify a name for the feature.')
         ..info('\nUsage: flutterclean add <name> [--model] [--data]');
       exit(1);
     }
@@ -40,48 +40,50 @@ class AddCommand {
     final name = result.rest.first;
     // Always use the project root (where pubspec.yaml is) as destination.
     final projectRoot = Directory(Directory.current.path);
-    final generator = await MasonGenerator.fromBundle(cleanFeatureBundle);
+    final generator = await MasonGenerator.fromBundle(componentGeneratorBundle);
     final vars = <String, dynamic>{'name': name};
 
     final onlyModel = result['model'] as bool;
     final onlyData = result['data'] as bool;
 
     if (onlyModel) {
-      final progress = logger.progress('Generating model for "$name"...');
-      final filesGenerated = await GeneratorHelper.generate(
+      final progress = logger.progress(
+        '🪪 Generating model for "$name"...',
+      );
+      await GeneratorHelper.generate(
         generator: generator,
         destination: projectRoot,
         vars: vars,
         logger: logger,
       );
       progress.complete(
-        '✅ Successfully added model for "$name" ($filesGenerated files)',
+        '🎉 Successfully added model for "$name"',
       );
     } else if (onlyData) {
       final progress = logger.progress(
-        'Generating data source and repository for "$name"...',
+        '🌐 Generating data for "$name"...',
       );
-      final filesGenerated = await GeneratorHelper.generate(
+      await GeneratorHelper.generate(
         generator: generator,
         destination: projectRoot,
         vars: vars,
         logger: logger,
       );
       progress.complete(
-        '✅ Successfully added data source and repository for "$name" ($filesGenerated files)',
+        '🎉 Successfully added data for "$name"',
       );
     } else {
       final progress = logger.progress(
-        'Generating feature "$name" in all layers...',
+        '⚙️ Generating component "$name" in all layers...',
       );
-      final filesGenerated = await GeneratorHelper.generate(
+      await GeneratorHelper.generate(
         generator: generator,
         destination: projectRoot,
         vars: vars,
         logger: logger,
       );
       progress.complete(
-        '✅ Successfully added "$name" to all layers ($filesGenerated files)',
+        '🎉 Successfully added "$name"',
       );
     }
   }

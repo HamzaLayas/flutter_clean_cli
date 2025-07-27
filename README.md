@@ -26,12 +26,12 @@ flutterclean <command> [arguments]
 
 - `create <project_name> [--no-dep]`
   - Create a new clean architecture Flutter project. Also generates a default `user` feature.
+- `add <name>`
+  - Add a model, data source and repository file to the data layer using the provided `<name>`.
 - `add --model <name>`
   - Add a model file to the data layer using the provided `<name>`.
 - `add --data <name>`
   - Add a data source and repository to the data layer using the provided `<name>`.
-- `upgrade`
-  - Update the CLI's Dart SDK constraint in `pubspec.yaml` to match your Flutter SDK, and run `dart pub get`.
 - `help`
   - Show usage instructions for all commands.
 
@@ -45,12 +45,6 @@ flutterclean <command> [arguments]
 - Works globally from any directory
 
 ---
-
-## 🏗️ Project Structure
-
-- All code generation is handled by Mason bricks in the `bricks/` directory.
-
---
 
 ## 🤝 Contributing
 
